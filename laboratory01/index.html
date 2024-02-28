@@ -75,9 +75,9 @@
                 function helper(r) {
                     const randChar = String.fromCharCode(97 + (Math.floor(Math.random() * 26)));
                     if (r & 1 === 1) {
-                        resolve(randChar + "rej");
+                        resolve(randChar);
                     } else {
-                        reject(randChar + "res");
+                        reject(randChar);
                     }
                 }
                 for (let k = 1; k < 3; k++) {
