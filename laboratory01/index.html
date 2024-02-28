@@ -21,6 +21,7 @@
         }
 
         let arrNum = new Array(11, 12, 31, 40, 51007);
+        console.log("****No. 1****");
         for (let i = 0; i < arrNum.length; i++) {
             isOdd(arrNum[i])
                 .then(result => {
@@ -45,7 +46,7 @@
 
         async function printRandChar() {
             const randChar = await getRandomCharacter()
-            console.log(randChar);
+            console.log("\n****No. 2****\n" + randChar);
         }
         printRandChar();
 
@@ -64,7 +65,7 @@
                 const randData = await getData(T)
                 // console.log(randData +  "oks");
             } catch (err) {
-                console.log(err);
+                console.log("\n****No. 3****\n" +err);
             }
         }
         printRandData(500);
@@ -81,7 +82,7 @@
                     }
                 }
                 for (let k = 1; k < 3; k++) {
-                    setTimeout(helper(k + df), 500);
+                    setTimeout(()=>{helper(k + df)}, 500);
                 }
             });
             return p;
@@ -90,7 +91,7 @@
             let res;
             try {
                 res = await rejectResolve(0);
-                console.log(res);
+                console.log("\n****No. 4****\n" +res);
 
                 res = await rejectResolve(1); 
                 //I had to call it twice because even though 
